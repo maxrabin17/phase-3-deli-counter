@@ -6,6 +6,7 @@ def line(deli)
         line = "The line is currently:"
         deli.each.with_index(1) do |person, index|
             line << " #{index}. #{person}"
+            # puts "The line is currently: #{names.map.with_index(1){|name, i| "#{i}. #{name}"}.join(" ")}"
         end
     puts line
     end
@@ -20,7 +21,7 @@ def now_serving(deli)
     if deli.empty?
         puts "There is nobody waiting to be served!"
     else
-        puts "Currently serving #{deli.first}."
+        puts "Currently serving #{deli.shift()}."
     end
-    deli.shift
+    # deli.shift
 end
